@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build up UI Library from scratch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dylan Zhang",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.7.4",
+    "vue": "^3.2.37"
+  }
+}
