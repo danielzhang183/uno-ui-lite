@@ -4,7 +4,15 @@
   "description": "Build up UI Library from scratch.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "lint:fix": "nr lint --fix",
+    "play": "npm -C playground run dev",
+    "release": "bumpp package.json packages/**/package.json",
+    "size": "esno scripts/size.ts",
+    "stub": "pnpm -r --filter=./packages/* --parallel run stub",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:update": "vitest -u"
   },
   "keywords": [],
   "author": "Dylan Zhang",
