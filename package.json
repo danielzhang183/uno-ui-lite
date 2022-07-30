@@ -9,7 +9,10 @@
   "keywords": [],
   "author": "Dylan Zhang",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
+    "@dylanzhang/components": "workspace:*",
+    "@dylanzhang/theme-chalk": "workspace:*",
+    "@dylanzhang/utils": "workspace:*",
     "typescript": "^4.7.4",
     "vue": "^3.2.37"
   }
