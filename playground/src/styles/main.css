@@ -1,0 +1,21 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dui-c-context: 125,125,125;
+}
+
+html {
+  background-color: white;
+}
+
+html.dark {
+  color-scheme: dark;
+  background-color: #151515;
+  color: white;
+}

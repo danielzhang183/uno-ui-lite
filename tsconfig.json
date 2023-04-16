@@ -1,29 +1,24 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "module": "ESNext",
-    "declaration": false,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "jsx": "preserve",
-    "noLib": false,
-    "target": "es6",
-    "sourceMap": true,
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
+    "target": "ESNext",
+    "lib": ["DOM", "ESNext"],
     "strict": true,
-    "skipLibCheck": true
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "~/*": ["src/*"]
+    }
   },
-  "exclude": [
-    "node_modules",
-    "**/__test__",
-    "dist/**"
-  ]
+  "exclude": ["dist", "node_modules"]
 }
