@@ -17,7 +17,7 @@ import {
 
 export function unocssPreset(): Preset {
   return {
-    name: 'dz-ui',
+    name: 'uno-ui-lite',
     theme: mergeDeep<Theme>(unoTheme, {
       colors: {
         context: 'rgba(var(--dui-c-context),%alpha)',

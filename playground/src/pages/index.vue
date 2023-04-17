@@ -30,7 +30,7 @@ const markdown = 'I am **markdown** text here!'
       <div class="mb-5 flex gap-1">
         <DButton
           d="sm"
-          to="https://github.com/danielzhang183/dz-ui"
+          to="https://github.com/danielzhang183/uno-ui-lite"
           target="_blank"
           icon="carbon-logo-github"
         >
@@ -93,7 +93,7 @@ const markdown = 'I am **markdown** text here!'
           <DLink to="/" d="green">
             Link
           </DLink>
-          <DLink href="https://github.com/danielzhang183/dz-ui">
+          <DLink href="https://github.com/danielzhang183/uno-ui-lite">
             xxx.com
           </DLink>
         </form>

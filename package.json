@@ -1,12 +1,12 @@
 {
-  "name": "dz-ui",
+  "name": "uno-ui-lite",
   "type": "module",
   "version": "0.0.1",
   "packageManager": "pnpm@8.2.0",
   "description": "unbundled ui lib",
   "author": "Daniel Zhang",
   "license": "MIT",
-  "repository": "danielzhang183/dz-ui",
+  "repository": "danielzhang183/uno-ui-lite",
   "exports": {
     ".": {
       "require": "./module.cjs",
