@@ -11,7 +11,7 @@ const markdown = 'I am **markdown** text here!'
 </script>
 
 <template>
-  <div class="relative p-10 d-bg-base">
+  <div class="relative p-8 d-bg-base md:p-10">
     <div class="mx-auto w-full flex flex-col gap-4 container">
       <DTip d="hover:yellow-600 dark:hover:yellow-500">
         This library is heavily working in progress. Breaking changes may not follow
@@ -103,7 +103,7 @@ const markdown = 'I am **markdown** text here!'
         <div class="d-header-upper">
           Radios
         </div>
-        <form class="flex items-center gap-3">
+        <form class="flex flex-wrap items-center gap-3">
           <DRadio v-model="radio" d="red6 dark:red5" name="name" value="a">
             Apple
           </DRadio>
@@ -120,7 +120,7 @@ const markdown = 'I am **markdown** text here!'
         <div class="d-header-upper">
           Switches
         </div>
-        <div class="flex items-center gap-3">
+        <div class="flex flex-wrap items-center gap-3">
           <DSwitch d="lime6 dark:lime5 sm" :model-value="true">
             SM
           </DSwitch>
@@ -235,11 +235,11 @@ const markdown = 'I am **markdown** text here!'
             text="Items Assemble"
             description="This is the description here"
           >
-            <div class="flex gap-2">
+            <div class="flex flex-wrap gap-2">
               <DButton
                 v-for="item in 4"
                 :key="item"
-                d="orange6 dark:orange5 sm dashed rounded-xl"
+                d="orange6 dark:orange5 sm dashed rounded-xl flex-shrink-0"
               >
                 Item {{ item }}
               </DButton>
