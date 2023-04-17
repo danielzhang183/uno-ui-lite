@@ -2,12 +2,43 @@
   "name": "dz-ui",
   "type": "module",
   "version": "0.0.0",
-  "description": "",
+  "packageManager": "pnpm@8.2.0",
+  "description": "unbundled ui lib",
   "author": "Daniel Zhang",
   "license": "MIT",
+  "repository": "danielzhang183/dz-ui",
+  "exports": {
+    ".": {
+      "require": "./module.cjs",
+      "import": "./dist/module.mjs"
+    },
+    "./module": {
+      "require": "./module.cjs",
+      "import": "./dist/module.mjs"
+    },
+    "./unocss": {
+      "import": "./dist/unocss.mjs"
+    }
+  },
+  "main": "./dist/module.mjs",
+  "files": [
+    "dist",
+    "*.cjs"
+  ],
   "scripts": {
-    "dev": "pnpm -C playground run dev",
-    "build": "vue-tsc --noEmit && vite build",
+    "dev": "pnpm play",
+    "build": "unbuild",
+    "lint": "eslint .",
+    "lintf": "eslint . --fix",
+    "play": "pnpm -C playground dev",
+    "play:build": "pnpm -C playground build",
+    "play:preview": "pnpm -C playground preview",
+    "prepublishOnly": "npm run build",
+    "release": "pnpm test && bumpp --commit --push --tag && pnpm publish",
+    "test": "pnpm lint",
+    "cleanup": "rimraf 'playground/node_modules' 'node_modules'",
+    "typecheck": "pnpm -r typecheck",
+    "postinstall": "npx simple-git-hooks",
     "up": "taze major -I"
   },
   "dependencies": {
@@ -20,6 +51,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
     "@iconify-json/carbon": "^1.1.16",
+    "@types/markdown-it": "^12.2.3",
     "@types/node": "^18.15.11",
     "@unocss/core": "^0.51.4",
     "@unocss/eslint-config": "^0.51.4",
@@ -28,13 +60,17 @@
     "@unocss/preset-mini": "^0.51.4",
     "@unocss/preset-uno": "^0.51.4",
     "@unocss/reset": "^0.51.4",
+    "bumpp": "^9.1.0",
     "eslint": "^8.38.0",
     "focus-trap": "^7.4.0",
     "lint-staged": "^13.2.1",
+    "markdown-it": "^13.0.1",
     "pnpm": "^8.2.0",
+    "shiki-es": "^0.2.0",
     "simple-git-hooks": "^2.8.1",
     "taze": "^0.9.1",
     "typescript": "^5.0.4",
+    "unbuild": "^1.2.1",
     "unocss": "^0.51.4"
   },
   "simple-git-hooks": {

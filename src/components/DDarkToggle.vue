@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useToggle } from '@vueuse/core'
+import { useColorMode, useToggle } from '@vueuse/core'
 
 const mode = useColorMode()
 const isDark = computed<boolean>({
@@ -8,8 +8,7 @@ const isDark = computed<boolean>({
     return mode.value === 'dark'
   },
   set() {
-    // @ts-expect-error need
-    mode.preference = isDark.value ? 'light' : 'dark'
+    mode.value = isDark.value ? 'light' : 'dark'
   },
 })
 const toggle = useToggle(isDark)

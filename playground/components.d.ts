@@ -21,6 +21,7 @@ declare module '@vue/runtime-core' {
     DIconTitle: typeof import('./../src/components/DIconTitle.vue')['default']
     DLink: typeof import('./../src/components/DLink.vue')['default']
     DLoading: typeof import('./../src/components/DLoading.vue')['default']
+    DMarkdown: typeof import('./../src/components/DMarkdown.vue')['default']
     DRadio: typeof import('./../src/components/DRadio.vue')['default']
     DSectionBlock: typeof import('./../src/components/DSectionBlock.vue')['default']
     DSelect: typeof import('./../src/components/DSelect.vue')['default']

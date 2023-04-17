@@ -1,8 +1,13 @@
 <script setup lang="ts">
+import { name, version } from '../../../package.json'
+
 const showDropdown = ref(false)
 const showDialog = ref(false)
 const radio = ref('a')
 const select = ref('')
+
+const code = 'import a from \'a\'\nimport c from \'c\''
+const markdown = 'I am **markdown** text here!'
 </script>
 
 <template>
@@ -13,10 +18,19 @@ const select = ref('')
         semver. Pin the version if used.
       </DTip>
 
+      <div class="flex items-center gap-2">
+        <div class="text-4xl uppercase">
+          {{ name }}
+        </div>
+        <sup class="text-xl">
+          <code>v{{ version }}</code>
+        </sup>
+      </div>
+
       <div class="mb-5 flex gap-1">
         <DButton
           d="sm"
-          to=""
+          to="https://github.com/danielzhang183/dz-ui"
           target="_blank"
           icon="carbon-logo-github"
         >
@@ -79,7 +93,7 @@ const select = ref('')
           <DLink to="/" d="green">
             Link
           </DLink>
-          <DLink href="https://nuxt.com">
+          <DLink href="https://github.com/danielzhang183/dz-ui">
             xxx.com
           </DLink>
         </form>
@@ -231,6 +245,19 @@ const select = ref('')
               </DButton>
             </div>
           </DSectionBlock>
+        </div>
+      </DCard>
+
+      <DCard class="p4">
+        <div class="d-header-upper">
+          Markdown
+        </div>
+        <div class="flex flex-col gap-2">
+          <DCodeBlock
+            :code="code"
+            lang="typescript"
+          />
+          <DMarkdown class="mb2 mt--1 text-base op50" :markdown="markdown" />
         </div>
       </DCard>
 
